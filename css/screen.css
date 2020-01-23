@@ -1,0 +1,33 @@
+html {font-family: 'Montserrat', sans-serif; /* 1 */-ms-text-size-adjust:none; /* 2 */-webkit-text-size-adjust:none; /* 2 */font-size:16px; -webkit-font-smoothing: antialiased; font-weight:400;margin:0 auto; margin-right:0 !important;scroll-behavior: smooth;}
+* {box-sizing: border-box;}
+body {margin: 0;}
+.game {position: relative;}
+h2 {line-height: normal;}
+p {line-height: 22pt;margin: 0 auto;text-shadow: 2px 2px 5px #000;}
+.room {background-position: center;background-size: 100% 100%; height: 100vh;width: auto;color: #b6b6b6;display: flex;flex-direction:column;justify-content: center;align-items: center;}
+.question {font-weight: 300;font-size: 20pt;text-align: center;line-height: 5pt;margin-bottom: 50pt;}
+.choice ul{list-style: none;padding: 0;text-align: center;}
+.choice ul li a{font-weight: 300;font-size: 18pt;color: #b6b6b6;text-decoration: none;display: block;border: 2px solid #b6b6b6;padding: 6pt 30pt;border-radius: 40px;margin: 10pt auto;background: #222222;}
+.choice ul li a:hover{background: #FFF;color: #000;}
+.equal {height: 100vh;width: 100%;display: none;position: fixed;z-index: 2;top: 0;}
+#true {background-position: center;background-size: 100% 100%;}
+#false {background-position: center;background-size: 100% 100%;}
+.aii-choice li{display: inline-block;margin: auto 10pt;}
+.choice a{font-weight: 300;font-size: 20pt;text-align: center;cursor: pointer;text-decoration: none;color: #b6b6b6;}
+@media only screen and (min-width:1025px){
+    .room {background-image:url('../images/bg.jpg')}
+    #true {background-image: url('../images/true.jpg')}
+    #false {background-image: url('../images/false.jpg')}
+}
+@media only screen and (max-width:1024px){
+    .aii-choice li{margin: auto;}
+    .room {background-image:url('../images/bg-mb.jpg');padding: 0 5pt;}
+    #true {background-image: url('../images/true-mb.jpg')}
+    #false {background-image: url('../images/false-mb.jpg')}
+}
+
+@media only screen and (max-height:850px) {
+    .question {margin-bottom: 0;}
+    .choice ul li a{font-size: 13pt;}
+    center {margin-top: 40pt;}
+}

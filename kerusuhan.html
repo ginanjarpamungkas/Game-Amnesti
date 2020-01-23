@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+    <div class="game">
+        <input type="hidden" id="number" value="1">
+        <div class="room">           
+            <!-- soal Kerusuhan 98 (room 2) -->
+            <div class="98" id="start">
+                <section class="question">
+                    <h2>Kerusuhan 98</h2>
+                    <p>Ikuti Kasusnya</p>
+                </section>
+                <section class="choice">
+                    <ul>
+                        <li><a onclick="start(this)" data-id="start" data-question="98">Mainkan</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="98-1" id="0" name="exam" style="display: none;">
+                <section class="question">
+                    <p>Penghilangan paksa terhadap</p>
+                    <p>mahasiswa dan aktivis</p>
+                    <p>terjadi pada kurun waktu...</p>
+                </section>
+                <section class="choice">
+                    <ul>
+                        <li><a onclick="equal(this)" data-question="98" data-id="true" href="#true">tahun 1997-1998</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">tahun 1996-1998</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">tahun 1995-1998</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="98-2" id="1" name="exam" style="display: none;">
+                <section class="question">
+                    <p>"...aku dambakan</p>
+                    <p>reformasi dan ____."</p>
+                    <p>(Wawan, Puisi 1998)</p>
+                </section>
+                <section class="choice">
+                    <ul>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">aksi</a></li>
+                        <li><a onclick="equal(this)" data-question="98" data-id="true" href="#true">demokrasi</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">oligarki</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="98-3" id="2" name="exam" style="display: none;">
+                <section class="question">
+                    <p>Negara harus melakukan</p>
+                    <p>investigasi atas pelanggaran HAM</p>
+                    <p>yang terjadi pada 21-23 Mei secara...</p>
+                </section>
+                <section class="choice">
+                    <ul>
+                        <li><a onclick="equal(this)" data-question="98" data-id="true" href="#true">independen</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">aktif</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">kolektif</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="98-4" id="end" style="display: none;">
+                <section class="question">
+                    <h2>Selamat</h2>
+                    <p>Anda Berhasil Manjawab Semua Soal</p>
+                </section>
+                <section class="choice">
+                    <center><a href="aii.html">Lihat Soal Lainnya</a></center>
+                </section>
+            </div>
+        </div>
+        <div class="equal" id="true" onclick="equal(this)" data-id="question" data-question="" ></div>
+        <div class="equal" id="false" onclick="equal(this)" data-id="question" ></div>
+    </div>
+<script src="js/jquery.min.js"></script>
+<script src="js/logic.js"></script>
+</body>
+</html>

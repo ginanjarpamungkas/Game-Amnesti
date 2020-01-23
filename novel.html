@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+    <div class="game">
+        <input type="hidden" id="number" value="1">
+        <div class="room">
+            <!-- soal Novel Baswedan (room 1) -->
+            <div class="novel" id="start">
+                <section class="question">
+                    <h2>Novel Baswedan</h2>
+                    <p>Ikuti Kasusnya</p>
+                </section>
+                <section class="choice">
+                    <ul>
+                        <li><a onclick="start(this)" data-id="start" data-question="novel">Mainkan</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="novel" id="0" name="exam" style="display: none;">
+                <section class="question">
+                    <p>Terduga pelaku penyerangan terhadap</p>
+                    <p>Novel Baswedan yang sempat ditangkap adalah...</p>
+                </section>
+                <section class="choice">
+                    <ul>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">Hasan Hunusalela</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">Mukhlis Ohorella</a></li>
+                        <li><a onclick="equal(this)" data-question="novel" data-id="true" href="#true">Ahmad Lestaluhu</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="novel" id="1" name="exam" style="display: none;">
+                <section class="question">
+                    <p>Agar kasus penyerangan </p>
+                    <p>terhadap Novel Baswedan tidak terulang,</p>
+                    <p>yang harus kita lakukan adalah...</p>
+                </section>
+                <section class="choice">
+                    <ul>
+                        <li><a onclick="equal(this)" data-question="novel" data-id="true" href="#true"> mendukung investigasi independen yang efektif</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">mendukung ketentuan-ketentuan baru hasil revisi UU KPK</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">mendukung penyelesaian kasus penyerangan terhadap Novel lewat jalur kekeluargaan</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="novel" id="2" name="exam" style="display: none;">
+                <section class="question">
+                    <p>Perkara yang diduga ada</p>
+                    <p>di balik teror Novel Baswedan</p>
+                    <p>adalah...</p>
+                </section>
+                <section class="choice">
+                    <ul>
+                        <li><a onclick="equal(this)" data-question="novel" data-id="true" href="#true">korupsi e-KTP</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">korupsi dana desa</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">korupsi batu bara</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="novel" id="end" style="display: none;">
+                <section class="question">
+                    <h2>Selamat</h2>
+                    <p>Anda Berhasil Manjawab Semua Soal</p>
+                </section>
+                <section class="choice">
+                    <center><a href="baiq.html">Lihat Soal Lainnya</a></center>
+                </section>
+            </div>
+        </div>
+        <div class="equal" id="true" onclick="equal(this)" data-id="question" data-question="" ></div>
+        <div class="equal" id="false" onclick="equal(this)" data-id="question" ></div>
+    </div>
+<script src="js/jquery.min.js"></script>
+<script src="js/logic.js"></script>
+</body>
+</html>

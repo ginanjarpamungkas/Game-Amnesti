@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+    <div class="game">
+        <input type="hidden" id="number" value="1">
+        <div class="room">
+            <!-- soal AII (room 4) -->
+            <div class="AII" id="start">
+                <section class="question">
+                    <h2>Amnesti International Indonesia</h2>
+                    <p>Ikuti Kasusnya</p>
+                </section>
+                <section class="choice">
+                    <ul>
+                        <li><a onclick="start(this)" data-id="start" data-question="AII">Mainkan</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="AII-1" id="0" name="exam" style="display: none;">
+                <section class="question">
+                    <p>Amnesti International Indonesia</p>
+                    <p>mencatat, terjadi ____ kasus pembunuhan</p>
+                    <p>diluar hukum yang disebabkan oleh</p>
+                    <p>pelanggaran individu petugas keamanan</p>
+                    <p>di Papua sejak Januari 2010 - Februari 2018</p>
+                </section>
+                <section class="choice">
+                    <ul class="aii-choice">
+                        <li><a onclick="equal(this)" data-id="false" href="#false">66</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">67</a></li>
+                        <li><a onclick="equal(this)" data-question="AII" data-id="true" href="#true">69</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="AII-2" id="1" name="exam" style="display: none;">
+                <section class="question">
+                    <p>Kita bisa membantu mengakhiri</p>
+                    <p>kekerasan dan impunitas di Papua dengan…</p>
+                </section>
+                <section class="choice">
+                    <ul>
+                        <li><a onclick="equal(this)" data-question="AII" data-id="true" href="#true">mendesak investigasi kasus kekerasan di Papua</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">mendukung penambahan aparat keamanan di Papua</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">melarang aksi damai di Papua</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="AII-3" id="2" name="exam" style="display: none;">
+                <section class="question">
+                    <p>Pemerintah berkomitmen untuk mengubah</p>
+                    <p>pendekatan berbasis kekuatan menjadi ____ di Papua.</p>
+                </section>
+                <section class="choice">
+                    <ul>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">kedamaian</a></li>
+                        <li><a onclick="equal(this)" data-question="AII" data-id="true" href="#true">kesejahteraan</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">kebebasan</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="AII-4" id="end" style="display: none;">
+                <section class="question">
+                    <h2>Selamat</h2>
+                    <p>Anda Berhasil Manjawab Semua Soal</p>
+                </section>
+                <section class="choice">
+                    <center><a href="novel.html">Lihat Soal Lainnya</a></center>
+                </section>
+            </div>
+        </div>
+        <div class="equal" id="true" onclick="equal(this)" data-id="question" data-question="" ></div>
+        <div class="equal" id="false" onclick="equal(this)" data-id="question" ></div>
+    </div>
+<script src="js/jquery.min.js"></script>
+<script src="js/logic.js"></script>
+</body>
+</html>

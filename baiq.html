@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+    <div class="game">
+        <input type="hidden" id="number" value="1">
+        <div class="room">
+            <!-- soal Baiq Nuril (room 3) -->
+            <div class="baiq" id="start">
+                <section class="question">
+                    <h2>Baiq Nuril</h2>
+                    <p>Ikuti Kasusnya</p>
+                </section>
+                <section class="choice">
+                    <ul>
+                        <li><a onclick="start(this)" data-id="start" data-question="BN">Mainkan</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="BN" id="0" name="exam" style="display: none;">
+                <section class="question">
+                    <p>MA memutuskan Baiq Nuril tetap bersalah,</p>
+                    <p>tapi ____ memberikan amnesti penuh</p>
+                    <p>kepada Baiq</p>
+                </section>
+                <section class="choice">
+                    <ul>
+                        <li><a onclick="equal(this)" data-question="BN" data-id="true" href="#true">Presiden</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">Ketua DPR</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">Ketua Komisi III DPR</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="BN" id="1" name="exam" style="display: none;">
+                <section class="question">
+                    <p>Akibat mengungkap pelecehan seksual yang terjadi kepadanya,</p>
+                    <p>Baiq Nuril dipidana berdasarkan ketentuan undang-undang...</p>
+                </section>
+                <section class="choice">
+                    <ul>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">Ketenagakerjaan</a></li>
+                        <li><a onclick="equal(this)" data-question="BN" data-id="true" href="#true">Informasi dan Transaksi Elektronik (ITE)</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">Kitab Undang-undang Hukum Pidana (KUHP)</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="BN" id="2" name="exam" style="display: none;">
+                <section class="question">
+                    <p>Perempuan harus hidup bebas</p>
+                    <p>dari ____ dan ____</p>
+                </section>
+                <section class="choice">
+                    <ul>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">pendidikan dan pemberdayaan</a></li>
+                        <li><a onclick="equal(this)" data-question="BN" data-id="true" href="#true">pelecehan dan kekerasan</a></li>
+                        <li><a onclick="equal(this)" data-id="false" href="#false">pemaksaan dan pengembangan diri</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="BN" id="end" style="display: none;">
+                <section class="question">
+                    <h2>Selamat</h2>
+                    <p>Anda Berhasil Manjawab Semua Soal</p>
+                </section>
+                <section class="choice">
+                    <center><a href="kerusuhan.html">Lihat Soal Lainnya</a></center>
+                </section>
+            </div>
+        </div>
+        <div class="equal" id="true" onclick="equal(this)" data-id="question" data-question="" ></div>
+        <div class="equal" id="false" onclick="equal(this)" data-id="question" ></div>
+    </div>
+<script src="js/jquery.min.js"></script>
+<script src="js/logic.js"></script>
+</body>
+</html>
